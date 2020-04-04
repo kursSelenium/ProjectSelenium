@@ -35,7 +35,8 @@ public class Selektory {
         //Krok 3
         WebElement quantityField = driver.findElement(By.xpath("//*[starts-with(@id,'quantity_')]"));
         quantityField.clear();
-        quantityField.sendKeys("2");
+        // wartosc pola input została chwilowo zmieniona na 10
+        quantityField.sendKeys("10");
         // WebElement quantityField = driver.findElement(By.xpath("//*[@class='quantity']/input"));
         // WebElement quantityField = driver.findElement(By.xpath(" //*[starts-with(@id,'quantity_')]"));
         // WebElement quantityField = driver.findElement(By.xpath("//input[@title='Szt.']"));
