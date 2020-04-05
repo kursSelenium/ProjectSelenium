@@ -58,6 +58,7 @@ public class Selektory {
 
         //Krok 5
         WebElement zobaczKoszykLink = driver.findElement(By.linkText("Zobacz koszyk"));
+        wait.until(ExpectedConditions.elementToBeClickable(zobaczKoszykLink));
         zobaczKoszykLink.click();
         // WebElement zobaczKoszykLink = driver.findElement(By.linkText("Zobacz koszyk"));
         // WebElement zobaczKoszykLink = driver.findElement(By.xpath("//a[text()='Zobacz koszyk']"));
