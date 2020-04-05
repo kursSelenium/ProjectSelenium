@@ -65,7 +65,7 @@ public class Selektory {
         //Krok 6
         WebElement kodKuponuInput = driver.findElement(By.id("coupon_code"));
         kodKuponuInput.clear();
-        kodKuponuInput.sendKeys("Wiosna2020");
+        kodKuponuInput.sendKeys("Zima1999");
         // WebElement kodKuponuInput = driver.findElement(By.id("coupon_code"));
         // WebElement kodKuponuInput = driver.findElement(By.xpath("//input[@name='coupon_code']"));
         // WebElement kodKuponuInput = driver.findElement(By.xpath("//*[@class='coupon']/input"));
