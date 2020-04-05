@@ -46,6 +46,7 @@ public class Selektory {
         // WebElement quantityField = driver.findElement(By.xpath("//input[@title='Szt.']"));
 
         //Krok 4
+        //Krok 4 - przejscie do koszyka produktowego
         WebElement dodajDoKoszykaButton = driver.findElement(By.xpath("//button[@name='add-to-cart']"));
         dodajDoKoszykaButton.click();
         // WebElement dodajDoKoszykaButton = driver.findElement(By.xpath("//button[@type='submit']"));
