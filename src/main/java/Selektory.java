@@ -71,7 +71,7 @@ public class Selektory {
         // WebElement kodKuponuInput = driver.findElement(By.xpath("//*[@class='coupon']/input"));
 
         //Krok 7
-        WebElement zastosujKuponButton = driver.findElement(By.name("apply_coupon"));
+        WebElement zastosujKuponButton = driver.findElement(By.xpath("//button[@type='submit'][@name='apply_coupon']"));
         zastosujKuponButton.click();
         // WebElement zastosujKuponButton = driver.findElement(By.name("apply_coupon"));
         // WebElement zastosujKuponButton = driver.findElement(By.xpath("//button[@type='submit'][@name='apply_coupon']"));
