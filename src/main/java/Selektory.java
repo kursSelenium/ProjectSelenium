@@ -2,6 +2,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class Selektory {
@@ -19,14 +21,16 @@ public class Selektory {
 
         driver.get("http://www.selenium-shop.pl/");
 
-
+        WebDriverWait wait = new WebDriverWait(driver,30);
 
         //Krok 1
         WebElement sklepMenu = driver.findElement(By.linkText("SKLEP"));
         sklepMenu.click();
 
         //Krok 2
-        WebElement koszulkaChelsea = driver.findElement(By.xpath("//h2[contains(text(),'Chelsea')]"));
+        // dodanie oczekiwania na element , zmiana xpath
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//h2[starts-with(text(),'Koszulka Chelsea')]")));
+        WebElement koszulkaChelsea = driver.findElement(By.xpath("//h2[starts-with(text(),'Koszulka Chelsea')]"));
         koszulkaChelsea.click();
         // WebElement koszulkaChelsea = driver.findElement(By.xpath("//h2[starts-with(text(),'Koszulka Chelsea')]"));
         // WebElement koszulkaChelsea = driver.findElement(By.xpath("//h2[ends-with(text(),'Chelsea London')]"));
